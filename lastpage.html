@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You'r Gorgeous</title>
+  <link rel="stylesheet" href="css/flower.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+<div class="language-selector">
+  <p>Choose a language:</p>
+  <button onclick="generatePoem('english')">English</button>
+  <button onclick="generatePoem('arabic')">العربية</button>
+</div>
+
+<div id="poem-container">
+  <p>Select a language to generate a poem.</p>
+</div>
+
+<body>
+  <div id="thankyou"><b>Thank you for reading and exploring this website wich is only made for you</b></div>
+  <div class="flower">
+    <div class="f-wrapper">
+      <div class="flower__line"></div>
+      <div class="f">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__leaf flower__leaf--5"></div>
+        <div class="flower__leaf flower__leaf--6"></div>
+        <div class="flower__leaf flower__leaf--7"></div>
+        <div class="flower__leaf flower__leaf--8 flower__fall-down--yellow"></div>
+      </div>
+    </div>
+
+    <div class="f-wrapper f-wrapper--2">
+      <div class="flower__line"></div>
+      <div class="f">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__leaf flower__leaf--5"></div>
+        <div class="flower__leaf flower__leaf--6"></div>
+        <div class="flower__leaf flower__leaf--7"></div>
+        <div class="flower__leaf flower__leaf--8 flower__fall-down--pink"></div>
+      </div>
+    </div>
+
+    <div class="f-wrapper f-wrapper--3">
+      <div class="flower__line"></div>
+      <div class="f">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__leaf flower__leaf--5"></div>
+        <div class="flower__leaf flower__leaf--6"></div>
+        <div class="flower__leaf flower__leaf--7"></div>
+        <div class="flower__leaf flower__leaf--8 flower__fall-down--purple"></div>
+      </div>
+    </div>
+    <div class="flower__glass"></div>
+  </div>
+  <script>
+    function generatePoem(language) {
+      const poemContainer = document.getElementById('poem-container');
+
+      if (language === 'english') {
+        const englishPoems = [
+          `\nYour eyes, like stars, shine bright at night\nGuiding lost dreams with their radiant light\nIn every glance a story is told\nOf warmth and wisdom, tender and bold.`,
+
+          `\nYour beauty shines with heaven's art,\nBut deeper still - your merciful heart.\nEach kindness shows, each gentle way,\nIs rahma blooming day by day.`,
+
+          `\nThey call you Cherry—sweet, alive,\nA burst of joy in summer's hive.But\nI've tasted deeper things:\nThe way your voice makes autumn sing.`
+        ];
+
+        const randomPoem = englishPoems[Math.floor(Math.random() * englishPoems.length)];
+        poemContainer.innerHTML = `<div class="english-poem">${randomPoem}</div>`;
+
+      } else if (language === 'arabic') {
+        const arabicPoems = [
+          `<br>
+          <p>وَلَقَدْ نَظَرْتُ إِلَى الْحِسَانِ فَلَمْ أَرَ ۞ مِثْلَ ابْنَةِ مَالِكٍ فِي الْبُرْءِ وَالْحَجَرِ</p>
+<p>وَإِذَا الْبَوَازِي صُدْنَ عَنْ غَزَلٍ بِهَا ۞ وَالْخَطُّ لَمْ يَخْطُبْ وَلَمْ يَذْكُرِ الْبَشَرِ</p>`,
+          `<br><p>مِكْحَلَةَ الْعَيْنَيْنِ مَشْهُودَةٌ لَهَا ۞ عَيْنَا ظَبِيٍّ فِي الْوَرَى وَرْدَةِ الْخَدِّ</p>
+<p>إِذَا مَا اسْتَنَارَتْ بِالْحَصَى بَرَقَتْ ۞ كَبَرْقِ الْخُلُوبِ الْمُتَقَلِّبِ فِي الْيَدِ</p>`,
+
+          ` <br><p>كَأَنَّ مُحَيَّاهَا إِذَا مَا تَبَسَّمَتْ ۞ شَمْسُ الضُّحَى فِي غَيْمَةٍ قَدْ تَلَأْلَأَتْ</p>
+<p>وَإِنْ تَشْتَكِ الْأَعْيُنُ مِنْهَا فَإِنَّهَا ۞ قَدْ أَصْبَحَتْ فِي حِلْيَةٍ لَمْ تُحَلَّلِ</p>`
+        ];
+
+        const randomPoem = arabicPoems[Math.floor(Math.random() * arabicPoems.length)];
+        poemContainer.innerHTML = `<div class="arabic-poem">${randomPoem}</div>`;
+      }
+    }
+  </script>
+</body>
+
+</html>
